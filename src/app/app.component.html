@@ -16,49 +16,9 @@
       <div class="temp">{{ weatherData.current.temp_f | number: '1.0-0'}}º</div>
     </div>
   </div>
-  <div class="lower-data">
-    <div class="more-info-label">
-      More Infomation
-    </div>
-    <div class="more-info-container">
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="../assets/cold-temp.png" alt="">
-          <span>Temperature</span>
-        </div>
-        <div class="info-block-value">
-          {{weatherData.current.temp_f}}º
-        </div>
-      </div>
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="../assets/hot-temp.png" alt="">
-          <span>Feels like</span>
-        </div>
-        <div class="info-block-value">
-          {{weatherData.current.feelslike_f}}º
-        </div>
-      </div>
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="../assets/freezing.png" alt="">
-          <span>Humidity</span>
-        </div>
-        <div class="info-block-value">
-          {{weatherData.current.humidity}}º
-        </div>
-      </div>
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="../assets/wind.png" alt="">
-          <span>Wind Speed</span>
-        </div>
-        <div class="info-block-value">
-         {{weatherData.current.wind_mph}} mph
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-infomations
+    [data]="weatherData"
+  ></app-infomations>
 </div>
 
 <router-outlet></router-outlet>
